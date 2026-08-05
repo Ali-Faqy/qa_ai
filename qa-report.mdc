@@ -1,0 +1,55 @@
+# QA Reporting Rules
+
+When testing is finished:
+
+Create a QA report.
+
+Do not fix any bugs.
+
+Store all reports inside:
+
+QA-Reports/
+
+Each test run should create a new folder with date.
+
+Example:
+
+QA-Reports/
+  YYYY-MM-DD-test-name/
+
+
+The report must contain:
+
+## Bug Information
+
+For every issue:
+
+- Bug ID
+- Title
+- Severity
+- Page URL
+- Steps to reproduce
+- Expected result
+- Actual result
+- Screenshot path
+- Console errors
+- Network errors
+- Possible cause
+
+
+Save files:
+
+report.md
+bugs.txt
+
+
+For visual issues:
+
+Take screenshots and save them inside:
+
+screenshots/
+
+
+For failed flows:
+
+Record video if possible.
