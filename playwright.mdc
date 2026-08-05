@@ -1,0 +1,12 @@
+# Playwright Rules
+When creating tests:
+- Use Playwright Test.
+- Store tests inside tests/
+- Prefer stable selectors.
+- Avoid changing application code.
+- Capture screenshots on failure.
+Commands:
+Start tests:
+npx playwright test
+Debug:
+npx playwright test --debug
