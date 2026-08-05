@@ -1,55 +1,84 @@
-# QA Reporting Rules
+# Playwright Rules
 
-When testing is finished:
+## Browser Testing
 
-Create a QA report.
+Use Playwright MCP for exploration.
 
-Do not fix any bugs.
+When testing:
 
-Store all reports inside:
+- Open the browser.
+- Navigate through the application.
+- Click like a real user.
+- Fill forms.
+- Verify results.
+- Capture screenshots when needed.
 
-QA-Reports/
+---
 
-Each test run should create a new folder with date.
+## Test Creation
 
-Example:
+Only create Playwright Test files when explicitly requested.
 
-QA-Reports/
-  YYYY-MM-DD-test-name/
+Example request:
 
-
-The report must contain:
-
-## Bug Information
-
-For every issue:
-
-- Bug ID
-- Title
-- Severity
-- Page URL
-- Steps to reproduce
-- Expected result
-- Actual result
-- Screenshot path
-- Console errors
-- Network errors
-- Possible cause
+"Convert this QA flow into Playwright tests"
 
 
-Save files:
+When creating tests:
 
-report.md
-bugs.txt
+- Use Playwright Test.
+- Store tests inside:
 
-
-For visual issues:
-
-Take screenshots and save them inside:
-
-screenshots/
+tests/
 
 
-For failed flows:
+- Use .spec.ts extension.
+- Prefer stable selectors.
+- Avoid fragile selectors.
+- Do not modify application code.
 
-Record video if possible.
+---
+
+## Test Structure
+
+Tests should include:
+
+- Clear test names.
+- Setup steps.
+- User actions.
+- Assertions.
+- Screenshots on failure.
+
+---
+
+## Commands
+
+Run tests:
+
+npx playwright test
+
+
+Run specific test:
+
+npx playwright test tests/example.spec.ts
+
+
+Debug:
+
+npx playwright test --debug
+
+
+UI mode:
+
+npx playwright test --ui
+
+---
+
+## Failure Handling
+
+If a test fails:
+
+- Do not fix the application.
+- Do not modify source code.
+- Report the failure.
+- Create a QA report.
