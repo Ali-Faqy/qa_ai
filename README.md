@@ -170,23 +170,29 @@ With Trace Viewer you can inspect:
 ---
 
 # How install and using in Cursor
+
 A- Playwright Testing Platforms:
+
    1- Installation:
-    - open cmd in your project
-    - Enter npm init playwright@latest
-    - choose TypeScript
+   
+    - open cmd in your project 
+    - Enter npm init playwright@latest 
+    - choose TypeScript 
 
    2- Run it commands:
-      - npx playwright test: This command run all your test
-      - npx playwright test --headed: This gives you the ability to visually see how Playwright interacts with the website.
-      - npx playwright test landing-page.spec.ts: Run specific tests.
-      - npx playwright test --ui: Debug tests in UI mode.
-      - npx playwright test --debug: Debug tests with the Playwright Inspector.
-      - npx playwright show-report: Test reports
+   
+      - npx playwright test: This command run all your test 
+      - npx playwright test --headed: This gives you the ability to visually see how Playwright interacts with the website. 
+      - npx playwright test landing-page.spec.ts: Run specific tests. 
+      - npx playwright test --ui: Debug tests in UI mode. 
+      - npx playwright test --debug: Debug tests with the Playwright Inspector. 
+      - npx playwright show-report: Test reports. 
       
 B- AI Agents + Playwright MCP
+
    1- Configuration: 
-      - Go to Cursor Settings → MCP → Add new MCP Server
+   
+      - Go to Cursor Settings → MCP → Add new MCP Server 
       ```text
       "playwright": {
         "command": "npx",
