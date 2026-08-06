@@ -1,9 +1,5 @@
 # 🤖 AI in QA Testing
 
-> **Reference**
->
-> https://www.geeksforgeeks.org/websites-apps/top-ai-testing-tools-for-test-automation/
-
 There are two main ways to use AI in software testing:
 
 ## 1. AI Testing Platforms
@@ -21,7 +17,7 @@ Use AI-powered platforms that automatically create and execute tests.
 ---
 
 ## 2. AI Agents + Playwright
-
+https://playwright.dev/docs/intro
 Use AI coding assistants such as:
 
 - Cursor
