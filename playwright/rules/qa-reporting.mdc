@@ -1,0 +1,116 @@
+# QA Reporting Rules
+
+After testing is completed:
+
+Create a QA report.
+
+Do not fix any bugs.
+
+---
+
+## Report Location
+
+Store reports inside:
+
+QA-Reports/
+
+
+Each test run should create a new folder:
+
+Example:
+
+QA-Reports/
+  YYYY-MM-DD-test-name/
+
+
+---
+
+## Required Files
+
+Create:
+
+report.md
+
+bugs.txt
+
+
+Folder structure:
+
+QA-Reports/
+└── checkout-test/
+    |
+    ├── report.md
+    ├── bugs.txt
+    └── screenshots/
+
+---
+
+## Bug Report Format
+
+For every issue include:
+
+- Bug ID
+- Title
+- Severity
+- Page URL
+- Steps to reproduce
+- Expected result
+- Actual result
+- Screenshot path
+- Console errors
+- Network errors
+- Possible cause
+
+---
+
+## Screenshots
+
+For:
+
+- UI bugs
+- Failed steps
+- Unexpected behavior
+
+Save screenshots inside:
+
+screenshots/
+
+
+Example:
+
+screenshots/
+  bug-001.png
+
+
+---
+
+## Videos
+
+For failed flows:
+
+Record video if possible.
+
+---
+
+## Summary
+
+At the end include:
+
+Testing completed:
+
+- Flow name
+- Passed steps
+- Failed steps
+
+Issues found:
+
+- Critical:
+- High:
+- Medium:
+- Low:
+
+Created files:
+
+- Reports
+- Screenshots
+- Videos
