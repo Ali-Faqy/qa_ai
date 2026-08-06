@@ -169,6 +169,14 @@ With Trace Viewer you can inspect:
 
 ---
 
+# How install and using in Cursor
+A- Playwright Testing Platforms:
+   1- Installation:
+    - open cmd in your project
+    - Enter npm init playwright@latest
+    - choose TypeScript
+B- AI Agents + Playwright
+
 # 💡 Summary
 
 There are two popular approaches to AI-powered testing:
@@ -176,4 +184,4 @@ There are two popular approaches to AI-powered testing:
 | Approach | Description |
 |----------|-------------|
 | AI Testing Platforms | AI creates and maintains tests through a visual interface (Autify, Testim, Momentic, etc.) |
-| AI Agents + Playwright | AI generates Playwright code that developers can customize, review, and version-control using tools like Cursor. |
+| AI Agents + Playwright | AI generates Playwright code that developers can customize, review, and version-control using tools like Cursor.
