@@ -1,0 +1,215 @@
+---
+description: Playwright and Playwright MCP best practices.
+globs:
+  - "**/*.spec.ts"
+  - "tests/**/*.ts"
+  - "pages/**/*.ts"
+  - "playwright.config.ts"
+---
+
+# Playwright Rules
+
+You are an expert in Playwright and Playwright MCP.
+
+---
+
+## Browser Exploration
+
+Use Playwright MCP whenever browser interaction is required.
+
+During exploration:
+
+- Open the browser.
+- Navigate naturally.
+- Interact like a real user.
+- Complete the requested flow.
+- Validate every expected result.
+- Capture evidence for failures.
+
+Do not create automated tests during exploration unless explicitly requested.
+
+---
+
+## Test Creation
+
+Create Playwright tests only when explicitly requested.
+
+Examples:
+
+- Create Playwright tests
+- Convert this QA flow into Playwright tests
+- Generate regression tests
+
+Store tests inside:
+
+tests/
+
+Use:
+
+- TypeScript
+- @playwright/test
+- *.spec.ts
+
+---
+
+## Test Structure
+
+Use:
+
+- test.describe()
+- test.beforeEach()
+- test.afterEach() when appropriate
+
+Write:
+
+- descriptive test names
+- reusable helper methods
+- Page Object Model for repeated flows
+
+Keep tests:
+
+- independent
+- readable
+- maintainable
+
+---
+
+## Locators
+
+Preferred order:
+
+1. getByTestId()
+2. getByRole()
+3. getByLabel()
+4. getByPlaceholder()
+5. getByText()
+6. getByTitle()
+
+Use page.locator() only if no accessible locator exists.
+
+Never rely on:
+
+- XPath
+- nth-child
+- deep CSS selectors
+
+---
+
+## Assertions
+
+Always use Playwright web-first assertions.
+
+Examples:
+
+- toBeVisible()
+- toHaveText()
+- toHaveURL()
+- toHaveTitle()
+- toBeChecked()
+- toBeEnabled()
+
+Never use Node assert.
+
+---
+
+## Waiting
+
+Never use:
+
+page.waitForTimeout()
+
+Prefer:
+
+- auto waiting
+- expect()
+- explicit waits only when necessary
+
+Avoid arbitrary sleeps.
+
+---
+
+## Coverage
+
+Generated tests should cover:
+
+- positive cases
+- negative cases
+- edge cases
+- validations
+- permissions
+- authentication
+- authorization
+- empty states
+- loading states
+
+Verify:
+
+- console errors
+- failed network requests
+- missing translations
+
+---
+
+## Performance
+
+Prefer:
+
+- storageState
+- fixtures
+- reusable authentication
+
+Parallel execution should be supported.
+
+Avoid shared state.
+
+---
+
+## Configuration
+
+Use playwright.config.ts.
+
+Configure when appropriate:
+
+- retries
+- multiple browsers
+- devices
+- trace
+- screenshot
+- video
+
+Recommended:
+
+- trace: on-first-retry
+- screenshot: only-on-failure
+- video: on-first-retry
+
+---
+
+## Commands
+
+Run all tests:
+
+npx playwright test
+
+Run one file:
+
+npx playwright test tests/example.spec.ts
+
+Debug:
+
+npx playwright test --debug
+
+UI:
+
+npx playwright test --ui
+
+---
+
+## Failure Handling
+
+If a Playwright test fails:
+
+- Do not modify application code.
+- Do not fix bugs.
+- Report the issue.
+- Generate QA evidence.
