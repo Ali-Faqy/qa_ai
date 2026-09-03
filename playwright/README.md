@@ -245,26 +245,6 @@ The goal is to determine whether the problem is with the test or with the applic
 
 ---
 
-# 🔥 Playwright MCP vs Playwright Test Agents
-
-These are **not the same thing**.
-
-## Playwright MCP
-
-MCP provides the AI with the ability to **interact with the browser**.
-
-Think of it as the browser-control layer.
-
-```text
-AI Agent
-   ↓
-Playwright MCP
-   ↓
-Browser
-```
-
----
-
 ## Playwright Test Agents
 
 The Agents provide the **testing workflow**.
@@ -278,48 +258,6 @@ Generator
    ↓
 Healer
 ```
-
----
-
-# 🧩 Complete Architecture
-
-When everything is combined:
-
-```text
-                    AI Coding Agent
-                           │
-                           ▼
-                Playwright Test Agents
-                           │
-              ┌────────────┼────────────┐
-              ▼            ▼            ▼
-           Planner      Generator     Healer
-              │            │            │
-              └────────────┼────────────┘
-                           ▼
-                    Playwright MCP
-                           │
-                           ▼
-                        Browser
-                           │
-                           ▼
-                        Website
-```
-
-The relationship can therefore be understood as:
-
-```text
-AI Agent
-   │
-   └── Playwright Test Agents
-            │
-            └── Playwright MCP
-                     │
-                     └── Browser
-```
-
-**MCP provides browser interaction capabilities, while the Test Agents provide a structured workflow for planning, generating, and healing Playwright tests.**
-
 ---
 
 # 💻 Installing Playwright in Cursor
@@ -329,6 +267,7 @@ AI Agent
 Open CMD/Terminal inside your project:
 
 ```bash
+npm init playwright@latest
 npm init playwright@latest
 ```
 
@@ -428,11 +367,6 @@ For VS Code:
 ```bash
 npx playwright init-agents --loop=vscode
 ```
-
-For Cursor, the configuration follows Cursor's own agent configuration structure.
-
-The important concept is that the Playwright Agents sit **above Playwright MCP**, using browser interaction capabilities to explore, generate, and maintain tests.
-
 ---
 
 # 🖥️ Playwright Agents in Cursor
@@ -462,13 +396,10 @@ Project
 │
 ├── tests/
 │
-├── playwright.config.ts
+├── playwright.config.ts   ← Defines the project base URL and Playwright configuration (await page.goto('https://example.com/login');)
 │
 └── package.json
 ```
-
-For MCP configuration, use Cursor's MCP configuration and add the Playwright MCP server.
-
 ---
 
 # ⚙️ Enable Playwright Testing in Cursor
