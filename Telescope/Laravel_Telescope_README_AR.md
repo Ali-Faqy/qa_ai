@@ -1,4 +1,4 @@
-# Laravel Telescopeبالعربي
+# Laravel Telescope
 
 ## 📌 ما هو Laravel Telescope؟
 
