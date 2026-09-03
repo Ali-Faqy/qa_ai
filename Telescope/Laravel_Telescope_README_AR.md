@@ -1,4 +1,4 @@
-# Laravel Telescope --- README بالعربي
+# Laravel Telescopeبالعربي
 
 ## 📌 ما هو Laravel Telescope؟
 
@@ -47,43 +47,7 @@ Car Quantity Updated
 
 ------------------------------------------------------------------------
 
-# 1. الفرق بين Telescope و Playwright
-
-Telescope و Playwright ليسا بديلين عن بعضهما، لأن كل واحد منهما يعمل في
-مستوى مختلف.
-
-  الأداة              الوظيفة الأساسية
-  ------------------- -----------------------------------------------
-  Laravel Telescope   مراقبة وفحص ما يحدث **داخل Laravel**
-  Playwright          اختبار التطبيق من منظور **المستخدم والمتصفح**
-  PHPUnit / Pest      اختبار الـ Code والـ Business Logic
-
-### مثال
-
-لنفترض أن لدينا:
-
-``` text
-Login
- ↓
-Product
- ↓
-Add to Cart
- ↓
-Checkout
- ↓
-Place Order
-```
-
-### Playwright يستطيع فحص:
-
--   هل زر Login موجود؟
--   هل المستخدم يستطيع تسجيل الدخول؟
--   هل زر Add to Cart يعمل؟
--   هل المنتج ظهر في Cart؟
--   هل Checkout يعمل؟
--   هل رسالة نجاح الطلب ظهرت؟
-
-### Telescope يستطيع فحص:
+# 1.  Telescope يستطيع فحص:
 
 -   أي Request وصل إلى Laravel؟
 -   ما هي SQL Queries التي تم تنفيذها؟
@@ -93,21 +57,6 @@ Place Order
 -   كم استغرقت الـ Queries؟
 -   ما الذي حدث داخل Livewire؟
 
-### الخلاصة
-
-``` text
-Playwright
-    =
-ماذا يرى ويفعل USER؟
-
-Telescope
-    =
-ماذا يحدث INSIDE Laravel؟
-
-PHPUnit / Pest
-    =
-هل الـ CODE والـ LOGIC يعملان بشكل صحيح؟
-```
 
 ------------------------------------------------------------------------
 
